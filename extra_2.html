@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>† 不完全消去領域：生物室の深淵 †</title>
+    <style>
+        body { 
+            background-color: #000000; 
+            color: #00ff00; 
+            font-family: 'Courier New', 'MS Gothic', monospace;
+            padding: 30px 20px; 
+            line-height: 1.8;
+            margin: 0;
+        }
+        .container { max-width: 500px; margin: 0 auto; text-align: left; }
+        .status-box {
+            border: 1px dashed #ff00ff; padding: 15px; background: #050505; margin-bottom: 25px; font-size: 13px; color: #ff00ff;
+        }
+        .story-p { margin: 0 0 15px 0; font-size: 14px; }
+        
+        /* 入力エリア・配置の最適化 */
+        .quiz-box {
+            border: 1px solid #00ff00; padding: 20px; background: #111111; margin-top: 25px;
+            display: flex; flex-direction: column; align-items: center;
+        }
+        .quiz-title { color: #ffff00; font-weight: bold; font-size: 15px; margin-bottom: 15px; width: 100%; text-align: left; }
+        .quiz-text { margin: 0 0 20px 0; font-size: 14px; color: #ffffff; width: 100%; text-align: left; }
+        
+        input[type="text"] { 
+            background: #000000; border: 1px solid #00ff00; color: #00ff00; 
+            padding: 12px; width: 100%; max-width: 300px; box-sizing: border-box;
+            text-align: center; font-size: 16px; font-weight: bold; margin-bottom: 15px;
+        }
+        button { 
+            background: #00ff00; color: #000000; border: none; padding: 12px; 
+            width: 100%; max-width: 300px; box-sizing: border-box;
+            font-weight: bold; font-size: 15px; cursor: pointer;
+        }
+        
+        #phoneQuizScreen, #moveScreen { display: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="posterScreen">
+        <h3 style="color: #ff00ff; text-align: center; margin-top: 0; letter-spacing: 2px;">† REAL SYNC: EXTRA STAGE-2 †</h3>
+        <div class="status-box">
+            <div>[STATUS] 記憶のサルベージ：2ノード目</div>
+            <div>[LOCATION] 生物室前ポスター</div>
+        </div>
+        <div class="story-p">
+            生物室の前に到着すると、スマホの画面が同期を始めた。
+        </div>
+        <div class="story-p" style="color: #ffff00;">
+            「……生物室の前に来てくれたんだね。ここは賑やかな祭りの喧騒から逃れて、当時の僕が一番落ち着けた、暗くて静かな避難所だったんだ」
+        </div>
+        <div class="story-p">
+            「さあ、<b>生物室の前に貼られた『第2問のポスター』</b>を見てくれ。そこにある謎を解くんだ」
+        </div>
+        <div class="quiz-box">
+            <div class="quiz-title" style="color: #ff00ff;">【第2問：生物室前の暗号ポスター】</div>
+            <p class="quiz-text">
+                生物室の前に掲示されているポスターの謎を解き、導き出した答えを入力せよ。
+            </p>
+            <input type="text" id="ans2" placeholder="答えを入力">
+            <button onclick="checkAnswer2()">暗号を送信する</button>
+        </div>
+    </div>
+
+    <div id="phoneQuizScreen">
+        <h3 style="color: #00ffff; text-align: center; margin-top: 0; letter-spacing: 2px;">† INTRA-DEVICE: EXTRA STAGE-3 †</h3>
+        <div class="status-box" style="border-color: #00ffff; color: #00ffff;">
+            <div>[STATUS] 端末内強制ハック：3ノード目</div>
+            <div>[LOCATION] スマホ画面内（移動不要）</div>
+        </div>
+        <div class="story-p" style="color: #ffffff;">
+            第2問のロックが解除された瞬間、画面が激しいエラーを吐き、新しい暗号がスマホに直接ダウンロードされた。
+        </div>
+        <div class="story-p" style="color: #ffff00;">
+            「……よし、2つ目の記憶が戻った。大気ウェブのバグが酷くて次のポスターデータが印刷できない！ <b>この第3問だけは、どこにも移動せず、その場でスマホの画面だけを見て解いてくれ！</b>」
+        </div>
+        <div class="quiz-box" style="border-color: #00ffff;">
+            <div class="quiz-title" style="color: #00ffff;">【第3問：端末内完結型コード】</div>
+            <p class="quiz-text" style="line-height: 1.8;">
+                私はお前と共に刻まれてきたもの。<br>
+                触れることはできず、失うのは一瞬。<br>
+                お前の「頭の中」だけに存在する、<br>
+                消えかけのアルバム。<br>
+                ……私は、何だ？
+            </p>
+            <input type="text" id="ans3" placeholder="ひらがなで入力">
+            <button style="background: #00ffff;" onclick="checkAnswer3()">答えを送信する</button>
+        </div>
+    </div>
+
+    <div id="moveScreen" style="border: 2px solid #00ffff; background: #001111; padding: 20px; box-shadow: 0 0 15px #00ffff; text-align: center;">
+        <h3 style="color: #00ffff; text-align: center; margin-top: 0; font-weight: bold; letter-spacing: 3px;">
+            🚨 NEXT MOVE LINKED 🚨
+        </h3>
+        <div style="color: #00ffff; font-weight: bold; font-size: 15px; margin-bottom: 15px; text-align: center; border-bottom: 1px solid #00ffff; padding-bottom: 10px;">
+            【同期成功】第3の記憶「きおく」をサルベージしました
+        </div>
+        <p class="story-p" style="color: #ffffff; text-align: left;">
+            「素晴らしい、僕の【記憶（きおく）】がハッキングされて戻ってきた……！」
+        </p>
+        <p class="story-p" style="color: #ffff00; text-align: left;">
+            「次の第4の暗号ポスターは、墨の匂いが立ち込める白と黒の世界……<b>【書道室】</b>の扉付近にセットしてある。そこへ移動して、ポスターを確認してくれ」
+        </p>
+        <p class="story-p" style="color: #ff3333; font-weight: bold; background: #330000; padding: 10px; border-left: 4px solid #ff0000; text-align: left;">
+            🚶‍♂️ 周囲の安全を確認し、今すぐ【書道室】の前へ向かってください。
+        </p>
+        <div style="margin-top: 25px;">
+            <button style="background: #00ffff; color: #000000; font-weight: bold;" onclick="location.href='extra_3.html'">
+                書道室の前に到着した
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function checkAnswer2() {
+        // 入力された文字を取得し、アルファベットの場合は大文字に統一
+        const a2 = document.getElementById('ans2').value.trim().toUpperCase();
+        
+        // 指定された正解パターン（DNA、ｄｎａ、デオキシリボ核酸、でおきしりぼかくさん）
+        if (a2 === "DNA" || a2 === "dna" || a2 === "デオキシリボ核酸" || a2 === "でおきしりぼかくさん") {
+            document.getElementById('posterScreen').style.display = 'none';
+            document.getElementById('phoneQuizScreen').style.display = 'block';
+            window.scrollTo(0, 0);
+        } else {
+            alert("『ACCESS DENIED』\nコードが違います。生物室前のポスターを確認してください。");
+        }
+    }
+
+    function checkAnswer3() {
+        const a3 = document.getElementById('ans3').value.trim();
+        if (a3 === "きおく" || a3 === "記憶" || a3 === "キオク") {
+            document.getElementById('phoneQuizScreen').style.display = 'none';
+            document.getElementById('moveScreen').style.display = 'block';
+            window.scrollTo(0, 0);
+        } else {
+            alert("『ERROR』\nスマホ画面の文字をよく観察し、並び替えてください。");
+        }
+    }
+</script>
+</body>
+</html>

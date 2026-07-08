@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME CLEAR!!</title>
+    <style>
+        /* 🌌 闇が晴れていくような、美しい水色と光のグラデーション */
+        body { 
+            background: linear-gradient(135deg, #0d2b35 0%, #005f73 50%, #0a9396 100%);
+            color: #ffffff; 
+            text-align: center; 
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif;
+            padding: 40px 20px; 
+            line-height: 1.8;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        /* 🎬 消滅の瞬間を描くストーリーボックス */
+        .intro-story {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: left;
+            font-size: 14px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* 🎬 エンドクレジットエリア */
+        .credit-box {
+            margin: 25px auto 35px auto; 
+            font-family: monospace; 
+            letter-spacing: 1px; 
+            opacity: 0.9;
+        }
+        .credit-title {
+            font-size: 13px; 
+            font-weight: bold; 
+            color: #ffeb3b; 
+            margin-bottom: 5px;
+            text-shadow: 0 0 8px rgba(255, 235, 59, 0.4);
+        }
+        .credit-team {
+            font-size: 11px; 
+            color: #e0e0e0;
+        }
+
+        .congrats { 
+            color: #ffeb3b; 
+            font-size: 28px; 
+            font-weight: 900; 
+            margin-bottom: 10px;
+            text-shadow: 0 0 15px rgba(255, 235, 59, 0.6);
+            letter-spacing: 2px;
+        }
+
+        .main-box {
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px solid #00ffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+            margin-bottom: 40px;
+        }
+        
+        /* 🗺️ ガチ勢向けの追加案内エリア */
+        .extra-section {
+            border: 2px dashed #ff3366;
+            background-color: rgba(255, 51, 102, 0.15);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255, 51, 102, 0.2);
+        }
+        .extra-title {
+            color: #ff3366;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 8px rgba(255, 51, 102, 0.5);
+        }
+        .extra-btn {
+            display: inline-block;
+            background-color: #ff3366;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 30px;
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: 0.2s;
+        }
+        .extra-btn:active {
+            transform: translateY(2px);
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="intro-story">
+        <p>あなたが体育館の端末に【一期一会】のコードを打ち込んだ瞬間、スマホの画面が目も眩むような<b>純白の光</b>に包まれた。</p>
+        <p>「……そうか、それなんだ。私が本当に欲しかったものは、君たちのような眩しい世界だったんだな。ありがとう、最後に思い出させてくれて……」</p>
+        <p>管理人の消え入るような声と共に、呪われた裏サイトは跡形もなく消滅した。</p>
+    </div>
+
+    <div class="credit-box">
+        <div class="credit-title">—— THANK YOU FOR PLAYING ——</div>
+        <div class="credit-team">制作：御子柴　匠音</div>
+    </div>
+
+    <div class="main-box">
+        <div class="congrats">✨ GAME CLEAR!! ✨</div>
+        <p style="font-size: 15px; margin: 0 0 10px 0;">
+            見事に全ての暗号を解き明かし、<br>
+            学校の裏サーバーを完全に機能停止させました！
+        </p>
+        <p style="font-size: 13px; color: #e0e0e0; margin: 0;">
+            ご参加ありがとうございました！<br>
+            引き続き、文化祭をお楽しみください！
+        </p>
+    </div>
+
+    <div class="extra-section">
+        <div class="extra-title">⚠️ さらに深い謎を解き明かしたい人へ</div>
+        <p style="font-size: 13px; margin: 0 0 12px 0; color: #f0f0f0; text-allign: left;">
+            システムは消去されましたが、ログの最深部にまだ完全に救出しきれていない「管理人の意識の残滓（ざんし）」が検知されました。<br>
+         　【裏ステージ】に挑戦し、彼を完全に救い出す「真の結末」を目指しますか？
+         <br>
+            所要時間は20分程度を想定しています。    </p>
+        <a href="extra_1.html" class="extra-btn">EXTRA STAGE（裏ルート）へ挑む</a>
+    </div>
+
+</div>
+
+</body>
+</html>

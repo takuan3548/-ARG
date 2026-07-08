@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>† REAL SYNC：ログインポータル †</title>
+    <style>
+        body { 
+            background-color: #000000; 
+            color: #00ff00; 
+            font-family: 'Courier New', 'MS Gothic', monospace;
+            padding: 30px 20px; 
+            line-height: 1.8;
+        }
+        .container { max-width: 500px; margin: 0 auto; text-align: left; }
+        
+        /* 🚨 タイトル演出 */
+        .portal-title {
+            text-align: center;
+            color: #00ff00;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            margin-bottom: 5px;
+            text-shadow: 0 0 10px #00ff00;
+        }
+        .portal-sub {
+            text-align: center;
+            color: #888888;
+            font-size: 11px;
+            margin-bottom: 25px;
+        }
+
+        /* 📖 あらすじエリア */
+        .story-box {
+            border-left: 2px solid #00ff00;
+            padding-left: 12px;
+            margin-bottom: 25px;
+            font-size: 13.5px;
+            color: #e0e0e0;
+        }
+
+        /* 📑 注意事項・ルールボックス */
+        .rule-box {
+            border: 1px solid #00ff00; 
+            padding: 15px; 
+            background: #050505;
+            margin-bottom: 25px;
+            font-size: 12.5px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
+        }
+        .rule-title {
+            color: #ffff00;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #00ff00;
+            padding-bottom: 5px;
+        }
+        
+        /* 🟢 侵入開始ボタン */
+        .enter-btn { 
+            background: #00ff00; 
+            color: #000000; 
+            border: none; 
+            padding: 14px 25px; 
+            font-weight: bold; 
+            font-size: 16px; 
+            cursor: pointer; 
+            width: 100%; 
+            margin-top: 15px;
+            letter-spacing: 3px;
+            box-shadow: 0 0 15px #00ff00;
+        }
+        .warning-item {
+            color: #ff3333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="portal-title">† REAL SYNC †</div>
+    <div class="portal-sub">校内周遊型・電脳暗号解読ミッション</div>
+    
+    <!-- 📖 あらすじ（プロローグ） -->
+    <div class="story-box">
+        <p style="margin: 0 0 10px 0; font-weight: bold; color: #ffff00;">【STORY OUTLINE】</p>
+        学校の古いローカルネットワークの奥底から、不可解なデータが検出された。<br>
+        それは、今から21年前――<b>2005年の文化祭の日</b>に閉鎖されたはずの、不気味な裏サイトの残骸だった。<br><br>
+        サイトを支配する管理人は、かつてこの学校に実在し、人間の肉体を捨てて電子の存在になろうとした狂気の学生だという。<br>
+        彼が校内に仕掛けた暗号をハックし、その執念の結末を暴け。
+    </div>
+
+    <!-- 🛠️ プレイヤーへのガイダンス -->
+    <div class="rule-box">
+        <div class="rule-title">⚙️ SYSTEM GUIDANCE（プレイ規約）</div>
+        
+        <p style="margin: 0 0 10px 0; color: #ffffff;">
+            本企画は、スマホ画面の指示に従って実際に校内を探索し、暗号を破るリアル謎解きゲームです。
+        </p>
+
+        <b>【ミッションの進め方】</b>
+        <ul style="margin: 5px 0 10px 0; padding-left: 18px;">
+            <li>画面の指示をもとに、指定された<b>「校内の実際の場所」</b>へ向かってください。</li>
+            <li>現地の掲示物等に、次のエリアのロックを解除する暗号が隠されています。</li>
+            <li>答えはすべて<b>ひらがな</b>で入力してください。</li>
+        </ul>
+
+        <b>【⚠ 探索時の最重要注意事項】</b>
+        <ul style="margin: 5px 0 0 0; padding-left: 18px;">
+            <li class="warning-item">歩きスマホは非常に危険です。画面を見る際は必ず周囲の安全を確認し、立ち止まって操作してください。</li>
+            <li class="warning-item">廊下や階段など、狭い場所を塞いで立ち止まらないよう、周りの方への配慮をお願いします。</li>
+            <li>立ち入り禁止区域にはヒントはありません。絶対に進入しないでください。</li>
+        </ul>
+    </div>
+
+    <div style="text-align: center;">
+        <p style="font-size: 11px; color: #888888; margin: 0;">これより、2005年のサーバーへバックドアを開放します。</p>
+        
+        <!-- 🔗 1問目の掲示板ページ（extra_1.html）へ直接ジャンプ -->
+        <button class="enter-btn" onclick="location.href='keijiban.html'">
+            サーバーへ侵入を開始する
+        </button>
+    </div>
+</div>
+
+</body>
+</html>

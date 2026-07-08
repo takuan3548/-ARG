@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>† サーバー最深部：強制消去システム †</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #00ff00;
+            font-family: 'Courier New', 'MS Pゴシック', sans-serif;
+            font-size: 14px;
+            margin: 0;
+            padding: 15px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            border: 2px solid #00ff00;
+            background-color: #050505;
+            padding: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.3);
+        }
+        .system-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            border-bottom: 2px dashed #00ff00;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: #ff3333;
+            animation: blink 1.5s infinite;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+        }
+        .message-box {
+            background-color: #111;
+            border: 1px solid #00ff00;
+            padding: 15px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        .input-area {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            border-top: 2px dashed #00ff00;
+        }
+        input[type="text"] {
+            background-color: #000;
+            border: 1px solid #00ff00;
+            color: #00ff00;
+            padding: 8px;
+            font-size: 16px;
+            text-align: center;
+            width: 80%;
+            max-width: 300px;
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #00ff00;
+            color: #000;
+            border: none;
+            padding: 10px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="system-title">🚨 WARNING: SERVER DESTRUCTION MODE 🚨</div>
+
+    <div class="message-box">
+        <p><b>【管理人の残した最期の暗号ログ】</b></p>
+        <p>ここまでこれたということは呪文を見つけられたんだな。</p>
+        <p>だが、奴らが私の存在を完全に消し去ろうと、奴らでさえてだしできないところに呪いを消し去る鍵を置いてきた。</p>
+        <p>それは、<b>【体育館】</b>だ。</p>
+        <p>体育館は常に多くの人の目があり、奴らににとって都合が悪い。そこに呪われたサイトを消去する、パスワードがある。</p>
+        <p>もうこの異世界に迷い込む者がいないよう、奴らとわたしごと、のろわれたさいとを消し去ってくれ。</p>
+    </div>
+
+    <div>
+        <p><b>［システム消去プロトコル］</b></p>
+        <p>今すぐ<b>「実際の体育館」</b>へと向かえ。<br>
+        入り口の壁に貼られたポスターを確認してくれ。</p>
+        <p>奴らの魔力を退ける大勢の熱気の隙間、その紙のどこかに、私がかつて何よりも愛し、そして羨んだ<b>【管理人が一番大切にしていたもの】</b>が刻まれているはずだ。</p>
+        <p style="color: #ff3333;">※現地で確認をして言葉を入力してください。</p>
+    </div>
+
+    <div class="input-area">
+        <input type="text" id="finalInput" placeholder="ENTER CODE"><br>
+        <button onclick="destroyServer()">サーバーを完全消去する</button>
+    </div>
+</div>
+
+<script>
+    function destroyServer() {
+        // 入力された文字を取得し、スペースを消して大文字に変換
+        const answer = document.getElementById('finalInput').value.trim().toUpperCase();
+
+        if (answer === "") {
+            alert("消去コードを入力しろ。私ごとすべてを終わらせるんだ。");
+            return;
+        }
+
+        // ⚠️ 正解を「あおはる」または「AOHARU」に設定
+        if (answer === "一五一会" || answer === "一期一会" || answer === "いちごいちえ"|| answer === "イチゴイチエ") {
+            alert("『SYSTEM INITIALIZED：【AOHARU】』\n\nシステム：サーバーの全データを永久に抹消します。\n\n「……そうか、それなんだ。私が本当に欲しかったものは、君たちに巡り合えた眩しい世界だったんだな。ありがとう、最後に思い出させてくれて……」\n\n画面が白い光に包まれ、裏サイトは跡形もなく消滅した。");
+            
+            // エンディング（ゲームクリア画面）へ移動
+            window.location.href = "ext1.html"; 
+        } else {
+            alert("「" + answer + "」……違う！コードが拒絶された！\n体育館の入り口のポスターをもう一度よく見てくれ。管理人がずっと大切にしていた、あの4文字の言葉だ！");
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>† 謎ノ試練・其ノ二：管理人の非公開日記 †</title>
+    <style>
+        /* 2005年の不気味な裏サイト風デザイン・スマホ最適化 */
+        body {
+            background-color: #000000;
+            color: #00FF00;
+            font-family: 'MS Pゴシック', 'Hiragino Kaku Gothic ProN', sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 15px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .nazo-box {
+            border: 2px dashed #00FF00;
+            padding: 15px;
+            background-color: #050505;
+            margin-bottom: 20px;
+        }
+        /* 入力フォーム（Form）のデザイン */
+        input[type="text"] {
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #111111;
+            color: #00FF00;
+            border: 1px solid #00FF00;
+            padding: 12px;
+            font-size: 18px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        button {
+            width: 100%;
+            background-color: #222222;
+            color: #00FF00;
+            border: 2px solid #00FF00;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #00FF00;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <center>
+        <h2><font color="#00FF00" size="5"><b>† 謎ノ試練・其ノ二 †</b></font></h2>
+        <p><font color="#FFFF00" size="2"><b>【ミッション】異界のトビラを特定せよ</b></font></p>
+        <hr size="2" color="#00FF00">
+    </center>
+
+    <div class="nazo-box">
+        <p>管理人のPCから、失踪直前に書かれた「非公開日記」の復元に成功した……。</p>
+        <p>どうやら管理人は、学校内にある<b>【人類の脳を模した迷宮】</b>の調査に向かったあと、そのまま消息を絶ったようだ。</p>
+        
+        <hr size="1" color="#00FF00">
+        <p style="color: #FF00FF; font-weight: bold;">📜 【管理人★の日記（2005/10/15）より】</p>
+        <p>
+            放課後、学校の敷地内にある「あの静まり返った部屋」から、妙な音が聞こえるんだ。<br>
+            <br>
+            <b>““ パサッ、パサッ…… ”</b> という、古い紙がめくれる音。<br>
+            誰もいないはずなのに、何かが棚の隙間を静かに動き回っているような気配。<br>
+            <br>
+            勇気を出してトビラの隙間から中を覗くと、暗闇の中に何千冊もの古い本が、まるで巨大な迷路のように不気味にそびえ立っていた……。。<br>
+            あそこは、現世の人間が集まる場所じゃない。
+        </p>
+        <hr size="1" color="#00FF00">
+        
+        <p><font color="#FFFF00">⚠️ 管理人が失踪する間際、この場所にいたに違いない。実際に行ったら何か手がかりが見つかるかもしれない。トビラの謎を解き、導き出した「呪文」を入力せよ……。</font></p>
+    </div>
+
+    <div style="background-color: #111111; padding: 15px; border: 1px solid #FF00FF;">
+        <p style="margin-top:0; color:#FF00FF; font-weight:bold; text-align: center;">【キーワード（呪文）を入力】</p>
+        
+        <input type="text" id="answerInput" placeholder="例：ひらけごま">
+        
+        <button type="button" onclick="checkAnswer()">◆ 異界のトビラを開く ◆</button>
+    </div>
+    <center>
+        <br>
+        <a href="壱の試練.html" style="color: #00FFFF;">➔ 一度トップページに戻る</a>
+    </center>
+</div>
+
+<script>
+    function checkAnswer() {
+        // 入力された文字を取得（前後の空白を消す）
+        const userAnswer = document.getElementById('answerInput').value.trim();
+
+        if (userAnswer === "") {
+            alert("入力されていない。恐れずに入力せよ……。");
+            return;
+        }
+
+        // ⚠️ 正解パターン（漢字・ひらがな・カタカナに対応）
+        if (userAnswer === "arohomora" || userAnswer === "あろほもら" || userAnswer === "アロホモラ") {
+            alert("ククク……正解だ。封印が解かれた！\n\n今すぐその建物のトビラへ向かえ。そこに貼られた「次のQRコード」を読み取ることで、最終試練が始まる……！");
+            // 正解したら、第3問（未定のクライマックスページ：p4.html）に自動ジャンプ
+            window.location.href = "p4.html"; 
+        } else {
+            // 間違っていた場合
+            alert("「" + userAnswer + "」……。ハズレだ。\n\nお前にはあの建物の底から響く、キュッキュッという床の音が聞こえないのか？");
+        }
+    }
+</script>
+
+</body>
+</html>

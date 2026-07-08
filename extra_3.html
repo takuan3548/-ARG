@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>† 核心暗号領域：書道室の結念 †</title>
+    <style>
+        body { 
+            background-color: #000000; 
+            color: #00ff00; 
+            font-family: 'Courier New', 'MS Gothic', monospace;
+            padding: 30px 20px; 
+            line-height: 1.8;
+            margin: 0;
+        }
+        .container { max-width: 500px; margin: 0 auto; text-align: left; }
+        .status-box {
+            border: 1px dashed #00ff00; padding: 15px; background: #050505; margin-bottom: 25px; font-size: 13px;
+        }
+        .story-p { margin: 0 0 15px 0; font-size: 14px; }
+        
+        /* 🔢 入力エリア・配置の最適化 */
+        .quiz-box {
+            border: 2px solid #00ff00; padding: 20px; background: #050505; margin-top: 25px;
+            display: flex; flex-direction: column; align-items: center; /* 縦一列・中央揃え */
+        }
+        .quiz-title { color: #ffff00; font-weight: bold; font-size: 16px; margin-bottom: 15px; width: 100%; text-align: left; }
+        .quiz-text { margin: 0 0 20px 0; font-size: 14px; color: #ffffff; width: 100%; text-align: left; }
+        
+        input[type="text"] { 
+            background: #000000; border: 1px solid #00ff00; color: #00ff00; 
+            padding: 12px; width: 100%; max-width: 300px; box-sizing: border-box;
+            text-align: center; font-size: 16px; font-weight: bold; margin-bottom: 15px;
+        }
+        button { 
+            background: #00ff00; color: #000000; border: none; padding: 12px; 
+            width: 100%; max-width: 300px; box-sizing: border-box;
+            font-weight: bold; font-size: 15px; cursor: pointer; transition: 0.2s;
+        }
+        button:active { background: #00aa00; }
+        
+        #alertScreen {
+            display: none; border: 2px solid #00ffff; background: #001111; padding: 20px; margin-top: 25px; box-shadow: 0 0 15px #00ffff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="quizScreen">
+        <h3 style="color: #00ff00; text-align: center; margin-top: 0; letter-spacing: 3px;">† SYSTEM STAGE-4: SHODO-NODE †</h3>
+        
+        <div class="status-box">
+            <div>[STATUS] 書道室サーバーリンク確立</div>
+            <div>[LOCATION] 書道室前ポスター</div>
+        </div>
+
+        <div class="story-p">
+            書道室の前に到着した。静まり返った廊下で、画面のプログラムがキー入力を求めている。
+        </div>
+        <div class="story-p" style="color: #ffff00;">
+            「……書道室の前だね。ここには僕が当時、心の中に閉じ込めていた言葉を吐き出すようにして隠した暗号がある。<b>書道室の前に貼られた『第4問のポスター』</b>を解いてくれ」
+        </div>
+
+        <div class="quiz-box">
+            <div class="quiz-title">【第4問：書道室前の暗号ポスター】</div>
+            <p class="quiz-text">
+                書道室の前に掲示されているポスターの謎を解き、答えを入力せよ。
+            </p>
+            <input type="text" id="ans4" placeholder="答えを入力">
+            <button onclick="checkAnswer4()">書道室の暗号を認証する</button>
+        </div>
+    </div>
+
+    <div id="alertScreen">
+        <h3 style="color: #00ffff; text-align: center; margin-top: 0; font-weight: bold; letter-spacing: 3px;">
+            🚨 NEXT MOVE PROTOCOL 🚨
+        </h3>
+        <div style="color: #00ffff; font-weight: bold; font-size: 15px; margin-bottom: 15px; text-align: center; border-bottom: 1px solid #00ffff; padding-bottom: 10px;">
+            【解除成功】書道室のノードが正常に復元されました
+        </div>
+        <p class="story-p" style="color: #ffffff; text-align: left;">
+            「よし、残るデータノードはあと最後の一つだ。最後は、美しい旋律が響くあの部屋……」
+        </p>
+        <p class="story-p" style="color: #ffff00; text-align: left;">
+            「特別教室棟にある<b>【音楽室】</b>の前だ。そこに貼ってある<b>『第5問（最後）のポスター』</b>を見て、すべての記憶を一つに繋ぎ合わせてくれ。向かってくれ！」
+        </p>
+        <p class="story-p" style="color: #ff3333; font-weight: bold; background: #330000; padding: 10px; border-left: 4px solid #ff0000; text-align: left;">
+            🚶‍♂️ 周囲の安全を確認し、今すぐ最後の目的地【音楽室】の前へ向かってください。
+        </p>
+        <div style="margin-top: 25px;">
+            <button style="background: #00ffff; color: #000000; font-weight: bold;" onclick="location.href='extra_4.html'">
+                音楽室の前に到着した
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function checkAnswer4() {
+        const a4 = document.getElementById('ans4').value.trim();
+        if (a4 === "人" || a4 === "ひと") {
+            document.getElementById('quizScreen').style.display = 'none';
+            document.getElementById('alertScreen').style.display = 'block';
+            window.scrollTo(0, 0);
+        } else {
+            alert("『ACCESS DENIED』\nコードが違います。書道室前のポスターを確認してください。");
+        }
+    }
+</script>
+</body>
+</html>

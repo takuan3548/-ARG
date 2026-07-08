@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>† 核心暗号領域：電脳覚醒ノード †</title>
+    <style>
+        body { 
+            background-color: #000000; 
+            color: #00ff00; 
+            font-family: 'Courier New', 'MS Gothic', monospace;
+            padding: 30px 20px; 
+            line-height: 1.8;
+            margin: 0;
+        }
+        .container { max-width: 500px; margin: 0 auto; text-align: left; }
+        .status-box {
+            border: 1px solid #00ff00; padding: 15px; background: #000500; margin-bottom: 25px; font-size: 13px; color: #00ff00; box-shadow: 0 0 15px #00ff00;
+        }
+        .story-p { margin: 0 0 15px 0; font-size: 14px; }
+        
+        /* 🔢 入力エリア・配置の最適化 */
+        .quiz-box {
+            border: 2px solid #ffff00; padding: 20px; background: #050505; margin-top: 25px;
+            display: flex; flex-direction: column; align-items: center; /* 縦一列・中央揃え */
+        }
+        .quiz-title { color: #ffff00; font-weight: bold; font-size: 16px; margin-bottom: 15px; width: 100%; text-align: left; }
+        .quiz-text { margin: 0 0 20px 0; font-size: 14px; color: #ffffff; width: 100%; text-align: left; }
+        
+        input[type="text"] { 
+            background: #000000; border: 1px solid #00ff00; color: #00ff00; 
+            padding: 12px; width: 100%; max-width: 300px; box-sizing: border-box;
+            text-align: center; font-size: 16px; font-weight: bold; margin-bottom: 15px;
+        }
+        button { 
+            background: #ffff00; color: #000000; border: none; padding: 12px; 
+            width: 100%; max-width: 300px; box-sizing: border-box;
+            font-weight: bold; font-size: 15px; cursor: pointer; transition: 0.2s;
+        }
+        button:active { background: #cccc00; }
+        
+        .epilogue-box {
+            border: 2px double #00ff00; padding: 25px; background: #030a03; margin-top: 20px;
+        }
+        .line-btn {
+            background: #06c755; color: #ffffff; border: none; padding: 14px; 
+            width: 100%; max-width: 300px; box-sizing: border-box;
+            font-weight: bold; font-size: 16px; cursor: pointer; border-radius: 5px; margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="gameContent">
+    <h3 style="color: #ffff00; text-align: center; margin-top: 0; letter-spacing: 3px;">† SYSTEM OVERLOAD: FINAL STAGE †</h3>
+    
+    <div class="status-box">
+        <div>[STATUS] 音楽室最終リンク確立</div>
+        <div>[LOCATION] 音楽室前ポスター</div>
+    </div>
+
+    <div class="story-p">
+        最後の目的地、音楽室の前に到着した。スマホの画面が激しく明滅し、最終パスコードを求めている。
+    </div>
+    <div class="story-p" style="color: #ffff00;">
+        「……ここまでよく来てくれた。音楽室の前に貼ってある<b>『第5問（最後）のポスター』</b>を見て、僕の全ての記憶を一つに繋ぎ合わせてくれ。頼む、僕を未来へ連れ出してほしい……！」
+    </div>
+
+    <div class="quiz-box">
+        <div class="quiz-title">【第5問：音楽室前の最終ポスター】</div>
+        <p class="quiz-text">
+            音楽室の前に掲示されている最終ポスターの暗号を解き、最後のキーワードを入力せよ。
+        </p>
+        <input type="text" id="ans5" placeholder="答えを入力">
+        <button onclick="awakenSystem()">最後のプログラムを実行する</button>
+    </div>
+</div>
+
+<script>
+    function awakenSystem() {
+        // 入力された文字を取得し、全角英数や前後の空白を考慮して調整
+        const a5 = document.getElementById('ans5').value.trim();
+        
+        // 指定された正解パターン（楽譜、がくふ、ガクフ）
+        if (a5 === "楽譜" || a5 === "がくふ" || a5 === "ガクフ") {
+            document.getElementById('gameContent').innerHTML = `
+                <h3 style="color: #ffff00; text-align: center; margin-top: 0; letter-spacing: 4px;">† EPILOGUE: 2005年の旅立ち †</h3>
+                
+                <div class="status-box" style="border-color: #ffff00; color: #ffff00; background: #050500;">
+                    <div>[SYS_LOG] 全記憶サルベージ完了</div>
+                    <div>[SYS_LOG] 管理人：21年間の呪縛から完全解放</div>
+                </div>
+
+                <div class="epilogue-box">
+                    <p class="story-p" style="color: #ffffff; font-weight: bold; border-bottom: 1px solid #00ff00; padding-bottom: 5px;">
+                        【真の結念：未来への旋律】
+                    </p>
+                    <p class="story-p">
+                        音楽室の扉の向こうから、優しく温かい電子のメロディが響いた気がした。スマホのノイズは完全に消え去り、澄み切った青空の画面が映し出される。
+                    </p>
+                    <p class="story-p">
+                        「……ありがとう。君たちが僕を連れ出してくれた。僕はもう、過去の暗闇でみんなを呪うだけの存在じゃない」
+                    </p>
+                    <p class="story-p" style="color: #00ff00;">
+                        「君たちが僕の思い出を救ってくれたから、僕はこれを持って、広大なインターネットの海へと新しく旅立つことができるよ。21年越しの僕の文化祭を、最高の終わりにしてくれて、本当にありがとう」
+                    </p>
+                </div>
+
+                <div style="text-align: center; margin-top: 25px; display: flex; flex-direction: column; align-items: center;">
+                    <p style="font-size: 16px; font-weight: bold; color: #ffffff; margin-bottom: 5px;">✨ TRUE GAME CLEAR ✨</p>
+                    <button class="line-btn" onclick="location.href='https://line.me/ti/g2/bbgZKGvvlxOULcSiD-vSejwxDlQ41cjAwA7Gkw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default'">
+                        電脳管理人のLINEに接続する
+                    </button>
+                </div>
+            `;
+            window.scrollTo(0, 0);
+        } else {
+            alert("『ERROR: FINAL UPDATE FAILED』\n最後のコードが違います。音楽室前のポスターをもう一度確認してください。");
+        }
+    }
+</script>
+</body>
+</html>

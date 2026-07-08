@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>† 不完全消去領域：美術室前の記憶 †</title>
+    <style>
+        body { 
+            background-color: #000000; 
+            color: #00ff00; 
+            font-family: 'Courier New', 'MS Gothic', monospace;
+            padding: 30px 20px; 
+            line-height: 1.8;
+            margin: 0;
+        }
+        .container { max-width: 500px; margin: 0 auto; text-align: left; }
+        .status-box {
+            border: 1px dashed #00ff00; padding: 15px; background: #050505; margin-bottom: 25px; font-size: 13px;
+        }
+        .story-p { margin: 0 0 15px 0; font-size: 14px; }
+        
+        /* 🔢 謎解きエリアと、入力欄・ボタンの綺麗に整列させるスタイル */
+        .quiz-box {
+            border: 1px solid #00ff00; padding: 20px; background: #111111; margin-top: 25px;
+            display: flex; flex-direction: column; align-items: center; /* 縦一列・中央揃え */
+        }
+        .quiz-title { color: #ffff00; font-weight: bold; font-size: 15px; margin-bottom: 15px; width: 100%; text-align: left; }
+        .quiz-text { margin: 0 0 20px 0; font-size: 14px; color: #ffffff; width: 100%; text-align: left; }
+        
+        input[type="text"] { 
+            background: #000000; border: 1px solid #00ff00; color: #00ff00; 
+            padding: 12px; width: 100%; max-width: 300px; box-sizing: border-box;
+            text-align: center; font-size: 16px; font-weight: bold; margin-bottom: 15px;
+        }
+        button { 
+            background: #00ff00; color: #000000; border: none; padding: 12px; 
+            width: 100%; max-width: 300px; box-sizing: border-box;
+            font-weight: bold; font-size: 15px; cursor: pointer; transition: 0.2s;
+        }
+        button:active { background: #00aa00; }
+        
+        #alertScreen {
+            display: none; border: 2px solid #ff0000; background: #110000; padding: 20px; margin-top: 25px; box-shadow: 0 0 15px #ff0000;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="quizScreen">
+        <h3 style="color: #ff0000; text-align: center; margin-top: 0; letter-spacing: 2px;">† SYSTEM LOG: EXTRA STAGE-1 †</h3>
+        
+        <div class="status-box">
+            <div>[STATUS] 記憶のサルベージ：1ノード目</div>
+            <div>[LOCATION] 美術室前ポスター</div>
+        </div>
+
+        <div class="story-p">
+            裏サイトは完全に消滅したはずだった。しかし、スマホの画面に管理人の微弱なメッセージノイズが流れ込んでくる。
+        </div>
+        <div class="story-p" style="color: #ffff00;">
+            「……ありがとう。でも、僕はまだ完全に解放されたわけじゃないんだ。あの日……2005年の文化祭の日、僕は誰とも馴染めず、ただ一人で孤独に校舎を彷徨っていた。その時に僕が歩いた足取りに沿って、各教室の前に暗号を隠した……」
+        </div>
+        <div class="story-p">
+            「まずはあの日、僕がトボトボと最初に通りかかった場所……<b>美術室の前に貼ってある『第1問のポスター』</b>を見てくれ。そこに、僕の最初の記憶のロックを外すコードがある」
+        </div>
+
+        <div class="quiz-box">
+            <div class="quiz-title">【第1問：美術室前のポスター】</div>
+            <p class="quiz-text">
+                美術室の前に掲示されているポスターの謎を解き、導き出した答えを入力せよ。
+            </p>
+            <input type="text" id="ans1" placeholder="答えを入力">
+            <button onclick="checkAnswer1()">暗号を送信する</button>
+        </div>
+    </div>
+
+    <div id="alertScreen">
+        <h3 style="color: #ff0000; text-align: center; margin-top: 0; font-weight: bold; letter-spacing: 3px;">
+            🚨 REAL MOVE PROTOCOL 🚨
+        </h3>
+        <div style="color: #ff3333; font-weight: bold; font-size: 15px; margin-bottom: 15px; text-align: center; border-bottom: 1px solid #ff0000; padding-bottom: 10px;">
+            【ロック解除】第1の扉がひらいた
+        </div>
+        <p class="story-p" style="color: #ffffff; text-align: left;">
+            「正解だ。あの日、美術室の中から楽しそうな笑い声が聞こえてきて、僕は耳を塞ぎたくなってその場を離れたんだ……」
+        </p>
+        <p class="story-p" style="color: #ffff00; text-align: left;">
+            「次に僕が向かったのは、静かで冷たい場所……同じ特別教室棟にある<b>【生物室】</b>の前だ。そこの扉付近に<b>『第2問のポスター』</b>を貼っておいた。向かってくれ」
+        </p>
+        <p class="story-p" style="color: #ff3333; font-weight: bold; background: #330000; padding: 10px; border-left: 4px solid #ff0000; text-align: left;">
+            🚶‍♂️ 周囲の安全に気をつけて、【生物室】の前へ移動してください。
+        </p>
+        <div style="margin-top: 25px;">
+            <button style="background: #ff0000; color: #ffffff;" onclick="location.href='extra_2.html'">
+                生物室の前に到着した
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function checkAnswer1() {
+        const a1 = document.getElementById('ans1').value.trim();
+        if (a1 === "絵具" || a1 === "えのぐ" || a1=== "絵の具" || a1=== "エノグ") {
+            document.getElementById('quizScreen').style.display = 'none';
+            document.getElementById('alertScreen').style.display = 'block';
+            window.scrollTo(0, 0);
+        } else {
+            alert("『ACCESS DENIED』\nコードが違います。美術室前のポスターをもう一度よく確認してください。");
+        }
+    }
+</script>
+</body>
+</html>
