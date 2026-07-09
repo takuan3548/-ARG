@@ -80,13 +80,13 @@
         </p>
         <hr size="1" color="#00FF00">
         
-        <p><font color="#FFFF00">⚠️ 管理人が失踪する間際、この場所にいたに違いない。実際に行ったら何か手がかりが見つかるかもしれない。トビラの謎を解き、導き出した「呪文」を入力せよ……。</font></p>
+        <p><font color="#FFFF00">⚠️ 管理人が失踪する間際、この場所にいたに違いない。実際に行ったら何か手がかりが見つかるかもしれない。トビラの謎を解き、導き出した「物」を入力せよ……。</font></p>
     </div>
 
     <div style="background-color: #111111; padding: 15px; border: 1px solid #FF00FF;">
-        <p style="margin-top:0; color:#FF00FF; font-weight:bold; text-align: center;">【キーワード（呪文）を入力】</p>
+        <p style="margin-top:0; color:#FF00FF; font-weight:bold; text-align: center;">【キーワードを入力】</p>
         
-        <input type="text" id="answerInput" placeholder="例：ひらけごま">
+        <input type="text" id="answerInput" placeholder="ここに入力してくれ">
         
         <button type="button" onclick="checkAnswer()">◆ 異界のトビラを開く ◆</button>
     </div>
@@ -107,13 +107,13 @@
         }
 
         // ⚠️ 正解パターン（漢字・ひらがな・カタカナに対応）
-        if (userAnswer === "arohomora" || userAnswer === "あろほもら" || userAnswer === "アロホモラ") {
-            alert("ククク……正解だ。封印が解かれた！\n\n今すぐその建物のトビラへ向かえ。そこに貼られた「次のQRコード」を読み取ることで、最終試練が始まる……！");
+        if (userAnswer === "カギ" || userAnswer === "鍵" || userAnswer === "かぎ") {
+            alert("ククク……正解だ。封印が解かれた！\n\n今すぐその建物のトビラへ向かえ。最終試練が始まる……！");
             // 正解したら、第3問（未定のクライマックスページ：p4.html）に自動ジャンプ
             window.location.href = "p4.html"; 
         } else {
             // 間違っていた場合
-            alert("「" + userAnswer + "」……。ハズレだ。\n\nお前にはあの建物の底から響く、キュッキュッという床の音が聞こえないのか？");
+            alert("「" + userAnswer + "」……。ハズレだ。\n\nわからないのか？");
         }
     }
 </script>
