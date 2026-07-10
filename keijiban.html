@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>☆★☆ 漆黒の堕天使・秘密の電子掲示板 Ver2.01 ☆★☆</title>
     <style>
-        /* 全体の基本設定（スマホ画面に最適化） */
         body {
             background-color: #000000;
             color: #00FF00;
@@ -181,12 +180,13 @@
         currentPostId++;
         
         const now = new Date();
+        const year = now.getFullYear();
         const month = String(now.getMonth() + 1).padStart(2, '0');
         const date = String(now.getDate()).padStart(2, '0');
         const hour = String(now.getHours()).padStart(2, '0');
         const min = String(now.getMinutes()).padStart(2, '0');
         const dayOfWeek = ['日', '月', '火', '水', '木', '金', '土'][now.getDay()];
-        const timeStr = `2005/${month}/${date}(${dayOfWeek}) ${hour}:${min}`;
+        const timeStr = `${year}/${month}/${date}(${dayOfWeek}) ${hour}:${min}`;
 
         const newPost = `
             <div class="post-box">
